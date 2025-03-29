@@ -12,7 +12,7 @@ The data set consists of 50 samples from each of three species of Iris (Iris set
 >
 ## Objective
 
-The purpose of this will be to extract the data and analyse it by creating a program that:
+The purpose of this project will be to extract the data and analyse it by creating a program that:
 > 
 1. Extracts and organises the different flower types and their categories
 2. Summarises each variable to a single text file that one can then use.
