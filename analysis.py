@@ -83,16 +83,20 @@ petal_length_histogram = sns.FacetGrid(df, hue="species", height=3).map(sns.hist
 petal_width_histogram = sns.FacetGrid(df, hue="species",  height=3).map(sns.histplot, "petal_width", bins=10, alpha=0.5).add_legend()
 sepal_length_histogram = sns.FacetGrid(df, hue="species",  height=3).map(sns.histplot, "sepal_length", bins=10, alpha=0.5).add_legend()
 sepal_width_histogram = sns.FacetGrid(df, hue="species",  height=3).map(sns.histplot, "sepal_width", bins=10, alpha=0.5).add_legend()
+plt.show()
+plt.close()
 
 # Finally we saved all of the above to different pngs. ChatGPT helped me here and remminded me that the above code needed to be saved to a specific variable.
 '''
 ChatGPT: "The best approach is to assign each FacetGrid to a variable, save its figure immediately with the savefig method (or plt.savefig using its .fig attribute), 
 and then close that figure before moving on. This ensures that each plot is saved independently without overlapping."
 '''
+'''
 petal_length_histogram.savefig("petal_length_histogram.png", bbox_inches='tight')
 petal_width_histogram.savefig("petal_width_histogram.png", bbox_inches='tight')
 sepal_length_histogram.savefig("sepal_length_histogram.png", bbox_inches='tight')
 sepal_width_histogram.savefig("sepal_width_histogram.png", bbox_inches='tight')
+'''
 
 # https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html
@@ -100,3 +104,19 @@ sepal_width_histogram.savefig("sepal_width_histogram.png", bbox_inches='tight')
 # https://matplotlib.org/stable/users/explain/colors/colors.html
 # https://medium.com/@maxmarkovvision/optimal-number-of-bins-for-histograms-3d7c48086fde
 # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
+
+
+# Now, for the scatterplot, we need to once again decide on what colours we're going to use here. Since we've already decided on "colorblind"
+# for the histograms, let's keep that one for consistency and pull from that with seaborn.
+# By following the documentation inthe seaborn website, we just need to pull from our data(df), assign our x and y which have already been defined previously and choose the palette.
+
+sepal_scatterplot = sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
+plt.show()
+
+# We repeat the same for the petals.
+petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
+plt.show()
+
+sns.pairplot(df, hue="species", size=3)
+plt.show()
+# https://seaborn.pydata.org/generated/seaborn.scatterplot.html
