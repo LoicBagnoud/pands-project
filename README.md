@@ -17,7 +17,8 @@ The purpose of this project will be to extract the data and analyse it by creati
 1. Extracts and organises the different flower types and their categories
 2. Summarises each variable to a single text file that one can then use.
 3. Saves a histogram of each variable to png files, and outputs a scatter plot of each pair of variables. 
-4. Extracts a possible correlation between the various species. 
+4. Outputs a Pairplot between the different species' variables.
+5. Extracts a possible correlation between the various species. 
 
 ## Packages needed
 

@@ -74,7 +74,7 @@ for col in df.columns:
 
 # Next comes seaborn. I ran into several problems, particularly when it comes to the Sepal_width. 
 # I discovered seaborns own built in palette and after several tries I settled with colorblind.
-sns.set_palette("colorblind")
+sns.set_palette("muted")
 
 # After this is done, we go ahead with Seaborn itself, getting our df (dataset), our hue, which would help us know that all species need to have different colours,
 # and the height which I left as the original.
@@ -117,6 +117,13 @@ plt.show()
 petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
 plt.show()
 
-sns.pairplot(df, hue="species", size=3)
+# One final analysis I found worth using was the pairplot. As it show cases the various relationships accross all variables, while more complete, it's also
+# more overwhelming to the eyes, making minute or specific detail finding more difficult. I considered using the histogram fro the diagonal but after several 
+# attepmts at trying to make it look less "squished" I eventually settled with leaving the default KDE since we're already exported the histograms anyway.
+
+sns.pairplot(df, hue="species")
 plt.show()
+
 # https://seaborn.pydata.org/generated/seaborn.scatterplot.html
+# https://seaborn.pydata.org/generated/seaborn.pairplot.html
+# https://www.analyticsvidhya.com/blog/2024/02/pair-plots-in-machine-learning/
