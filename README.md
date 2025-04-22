@@ -23,6 +23,5 @@ The purpose of this project will be to extract the data and analyse it by creati
 ## Packages needed
 
 - Matplotlib
-- Numpy
 - Pandas
 - Seaborn
