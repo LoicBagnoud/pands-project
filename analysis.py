@@ -49,10 +49,13 @@ sepal_length_histogram.savefig("sepal_length_histogram.png", bbox_inches='tight'
 sepal_width_histogram.savefig("sepal_width_histogram.png", bbox_inches='tight')
 
 sepal_scatterplot = sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
+plt.savefig("sepal_scatterplot.png", bbox_inches='tight')
 plt.show()
 
 petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
+plt.savefig("petal_scatterplot.png", bbox_inches='tight')
 plt.show()
 
-sns.pairplot(df, hue="species")
+pair_plot = sns.pairplot(df, hue="species")
+pair_plot.savefig("pairplot.png", bbox_inches='tight')
 plt.show()
