@@ -1,3 +1,8 @@
+# analysis.pt
+# This script has thee objective of analysis the famous Iris Dataset and extracting from it valuable information about its features, their
+# relationships as well as potential correlations we can find
+# Author: Loic Soares Bagnoud 
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns

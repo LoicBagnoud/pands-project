@@ -25,3 +25,22 @@ The purpose of this project will be to extract the data and analyse it by creati
 - Matplotlib
 - Pandas
 - Seaborn
+
+## Findings
+
+### Summarising the Data
+
+From the summaries we have extracted, we can see that overall, everything falls very much in line with what we expected. With nothing particularly egregious about it but we do notice that some features contain a higher Standard Deviation from others. For example, we notice that when it comes to Sepal Width across all the species, they are very close to one another. This is very different to for example, petal length, where we see a standard deviation of 1.76. 
+>
+This is a huge number and already highlights that some species (we're not sure which ones yet) are driving that standard deviation up. In other words, there are outliers present in those features that are not shared accross the species and given that number, we can clearly see that some gap between the species is vast.
+
+### Plotting the Data
+
+The plots will highlight our initial findings here and show us if our initial assumptions were correct. Let's have a look at some of them.
+>
+![Petal Length Histogram](Pngs/petal_length_histogram.png)
+![Petal Width Histogram](Pngs/petal_width_histogram.png)
+>
+>
+From both of these, it seems we were correct in our initial assumptions. We can see that the Petals of the Setosa are all on their side of the plot, separated from the other two. 
+Something is happening here that's driving the petals, at least for that species, to be in their own cluster. Interestingly enough, the same doesn't happen for Petal width, which has a lower Standard Deviation than Sepal length but shows no overlap with the other species at all. 
