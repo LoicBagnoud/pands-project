@@ -4,6 +4,7 @@
 # Author: Loic Soares Bagnoud 
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -19,20 +20,20 @@ petal_width  = df['petal_width']
 species      = df['species']
 
 numeric_df = df.select_dtypes(include=['number'])
-numeric_summary = numeric_df.agg(['count', 'mean', 'std', 'min', 'median', 'max'])
 
-for col in df.columns:
-    file_name = f"{col}_summary.txt"
+with open("summary.txt", "w") as f:
+    for column in numeric_df.columns:
+        data = numeric_df[column].values
+        
+        f.write(f"Statistics for {column}:\n")
+        f.write(f"  Mean: {np.mean(data):.2f}\n")
+        f.write(f"  Minima: {np.min(data):.2f}\n")
+        f.write(f"  Maxima: {np.max(data):.2f}\n")
+        f.write(f"  Standard Deviation: {np.std(data):.2f}\n")
+        f.write(f"  Median: {np.median(data):.2f}\n")
+        f.write("\n")  
 
-    if pd.api.types.is_numeric_dtype(df[col]):
-        col_summary = df[col].agg(['count', 'mean', 'std', 'min', 'median', 'max'])
-    else:
-        col_summary = df[col].value_counts()
-
-    with open(file_name, "w") as file:
-        file.write(col_summary.to_string())
-    
-    print(f"Summary for {col} has been written to {file_name}")
+print("Summary exported to summary.txt")
 
 sns.set_palette("muted")
 

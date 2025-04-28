@@ -22,19 +22,28 @@ The purpose of this project will be to extract the data and analyse it by creati
 
 ## Packages needed
 
+This script requires Python 3 to be run. If you need help with installing Python 3 you can go to their official website. All of the packages required are as follows:
+>
 - Matplotlib
+- Numpy
 - Pandas
 - Seaborn
+>
+All of these packages come preinstalled in Python and can be imported using the _import_ function. 
+>
+__Note - While Numpy is not really needed, given Pandas, I use for one specific instance, which I've found to be incredibly useful to organise the summaries into a txt file. More information on this in the Jupyter Notebook.__
 
 ## Findings
 
 ### Running the Script
 
-Please make sure that all packages are installed and run the script as is. It should provide you with summaries of each feature as well as Pngs of each plot discussed in the analysis below. 
+Please make sure that all packages are installed and run the script as is. It should provide you with the summary of each feature as well as Pngs of each plot discussed in the analysis below. 
 >
 Refer to the Jupyter Notebook included for more information on how the code is being run. 
 
 ### Summarising the Data
+
+Explanations on the analysis of the data set can also be found in the Jupyter Notebook alongside the code explanations. 
 
 From the summaries we have extracted, we can see that overall, everything falls very much in line with what we expected. With nothing particularly egregious about it but we do notice that some features contain a higher Standard Deviation than others. For instance, petal length has a standard deviation of 1.76, indicating greater spread across the entire dataset. In contrast, sepal width shows much less variation and appears more uniform across species.
 >
@@ -56,7 +65,7 @@ Something is happening here that's driving the petals, at least for that species
 >
 When it comes to Sepals however, there isn't that much of a correlation and all species seem to share the same characteristics mostly. While we do find some slight variation in the Sepal lenghts (once more, Setosa comes in), when it comes to the Sepal Widths, the graphs being so close to one another is a good reflection of the low standard deviation of that feature.
 > 
-This brings us then to another way we can analyse this data. Mainly through the use of scatterplots. We can start things off with a pair plot.
+The other way we can analyse this data is through the use of Scatterplots. 
 > 
 ![Petal Scatterplot](Pngs/petal_scatterplot.png)
 ![Sepal Scatterplot](Pngs/sepal_scatterplot.png)
