@@ -57,6 +57,28 @@ petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", 
 plt.savefig("petal_scatterplot.png", bbox_inches='tight')
 plt.show()
 
+sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
+x = df['petal_length']
+y = df['petal_width']
+slope, intercept = np.polyfit(x, y, 1)
+x_line = np.linspace(x.min(), x.max())
+y_line = slope * x_line + intercept
+plt.plot(x_line, y_line, color='purple', linewidth=2, label='Trend Line')
+plt.title("Petal Length vs. Petal Width with Trend Line")
+plt.legend()
+plt.show()
+
+sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
+x = df['sepal_length']
+y = df['sepal_width']
+slope, intercept = np.polyfit(x, y, 1)
+x_line = np.linspace(x.min(), x.max())
+y_line = slope * x_line + intercept
+plt.plot(x_line, y_line, color='purple', linewidth=2, label='Trend Line')
+plt.title("Sepal Length vs. Sepal Width with Trend Line")
+plt.legend()
+plt.show()
+
 pair_plot = sns.pairplot(df, hue="species")
 pair_plot.savefig("pairplot.png", bbox_inches='tight')
 plt.show()
