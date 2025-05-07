@@ -22,14 +22,40 @@ The purpose of this project will be to extract the data and analyse it by creati
 
 ## Packages needed
 
-This script requires Python 3 to be run. If you need help with installing Python 3 you can go to their official website. All of the packages required are as follows:
+To run this project, you'll need Python 3 installed on your machine. You can download the latest version from the official Python website: https://www.python.org/downloads/
+>
+Please make sure you follow the instructions outlined there. Additionally, this code uses several packages in order to achieve most of the tasks' objectives. It is expected that those are also properly downloaded and installed on your machine.
+>
+Instrutions are provided in each package below in order to install them but it is advisable to use Anaconda Distribution as it already contains these packages pre-installed. You can download Anaconda Distribution from here: https://www.anaconda.com/download/success
+
+All of the packages required are as follows:
 >
 - Matplotlib
 - Numpy
 - Pandas
 - Seaborn
 >
-All of these packages come preinstalled in Python and can be imported using the _import_ function. 
+All of these packages come preinstalled in Python and can be imported using the _import_ function. What follows is a list of the different packages and small descriptions.
+>
+#### Numpy
+>
+[Numpy](https://numpy.org/) provides support for large, multi-dimensional arrays and matrices, along with a wide range of mathematical functions to perform operations on them efficiently. It's the foundation for many scientific and data libraries, including Pandas and scikit-learn. For more information on how to install Numpy, please see the following: https://numpy.org/install/
+>
+#### Pandas
+>
+[Pandas](https://pandas.pydata.org/docs/index.html) is a powerful and user-friendly Python library for working with structured data. It's especially well-suited for datasets, like the Iris dataset, where each column can hold different data types. With its efficient data structures and analysis tools, Pandas makes it easy to explore and manipulate data with both numerical and categorical values. For more information on how to install Pandas, please see the following: https://pandas.pydata.org/docs/getting_started/install.html
+>
+#### Seaborn
+>
+As per their website, [Seaborn](https://seaborn.pydata.org/) is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. For more information installing matplotlib, please see the following: https://seaborn.pydata.org/installing.html
+
+>
+For more help in understanding and dealing with each package, please make sure to review and investigate the relevant documentation if anything remains unclear:
+>
+- [Numpy Documentation](https://numpy.org/doc/stable/)
+- [Pandas Documentation](https://pandas.pydata.org/docs/index.html)
+- [Matplotlib Documentation](https://matplotlib.org/)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
 >
 __Note - While Numpy is not really needed, given Pandas, I use for one specific instance, which I've found to be incredibly useful to organise the summaries into a txt file. More information on this in the Jupyter Notebook.__
 

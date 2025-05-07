@@ -79,6 +79,10 @@ plt.title("Sepal Length vs. Sepal Width with Trend Line")
 plt.legend()
 plt.show()
 
+sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', palette="colorblind", height=5, aspect=1.3)
+plt.title("Sepal Length vs Sepal Width with Regression Line")
+plt.show()
+
 pair_plot = sns.pairplot(df, hue="species")
 pair_plot.savefig("pairplot.png", bbox_inches='tight')
 plt.show()
