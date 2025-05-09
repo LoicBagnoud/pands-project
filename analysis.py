@@ -66,6 +66,7 @@ y_line = slope * x_line + intercept
 plt.plot(x_line, y_line, color='purple', linewidth=2, label='Trend Line')
 plt.title("Petal Length vs. Petal Width with Trend Line")
 plt.legend()
+plt.savefig("petal_scatterplot_trend_line.png", bbox_inches='tight')
 plt.show()
 
 sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
@@ -77,10 +78,12 @@ y_line = slope * x_line + intercept
 plt.plot(x_line, y_line, color='purple', linewidth=2, label='Trend Line')
 plt.title("Sepal Length vs. Sepal Width with Trend Line")
 plt.legend()
+plt.savefig("sepal_scatterplot_trend_line.png", bbox_inches='tight')
 plt.show()
 
 sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', palette="colorblind", height=5, aspect=1.3)
-plt.title("Sepal Length vs Sepal Width with Regression Line")
+plt.title("Sepal Length vs Sepal Width with Individual Regression Line")
+plt.savefig("sepal_scatterplot_individual_line.png", bbox_inches='tight')
 plt.show()
 
 pair_plot = sns.pairplot(df, hue="species")
