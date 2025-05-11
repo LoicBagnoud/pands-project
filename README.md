@@ -20,6 +20,16 @@ The purpose of this project will be to extract the data and analyse it by creati
 4. Outputs a Pairplot between the different species' variables.
 5. Extracts a possible correlation between the various species. 
 
+## Table of Contents
+- [Packages needed](#Packages-needed)
+    - [Numpy](#Numpy)
+    - [Pandas](#Pandas)
+    - [Seaborn](#Seaborn)
+    - [Matplotlib](#Matplotlib)
+- [Findings](#Findings)
+    - [Running the Script](#Running-the-Script)
+    - [Summarising the Data](#Summarising-the-Data)
+
 ## Packages needed
 
 To run this project, you'll need Python 3 installed on your machine. You can download the latest version from the official Python website: https://www.python.org/downloads/
@@ -44,6 +54,10 @@ All of these packages come preinstalled in Python and can be imported using the 
 #### Pandas
 >
 [Pandas](https://pandas.pydata.org/docs/index.html) is a powerful and user-friendly Python library for working with structured data. It's especially well-suited for datasets, like the Iris dataset, where each column can hold different data types. With its efficient data structures and analysis tools, Pandas makes it easy to explore and manipulate data with both numerical and categorical values. For more information on how to install Pandas, please see the following: https://pandas.pydata.org/docs/getting_started/install.html
+>
+#### Matplotlib
+>
+[Matplotlib](https://matplotlib.org/) is an especially useful package for plotting data in formats like line charts, bar graphs, scatter plots, and more. For more information installing matplotlib, please see the following: https://matplotlib.org/stable/users/getting_started/
 >
 #### Seaborn
 >
