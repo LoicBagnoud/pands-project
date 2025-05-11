@@ -49,15 +49,15 @@ petal_width_histogram.savefig("petal_width_histogram.png", bbox_inches='tight')
 sepal_length_histogram.savefig("sepal_length_histogram.png", bbox_inches='tight')
 sepal_width_histogram.savefig("sepal_width_histogram.png", bbox_inches='tight')
 
-sepal_scatterplot = sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
+sepal_scatterplot = sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="muted")
 plt.savefig("sepal_scatterplot.png", bbox_inches='tight')
 plt.show()
 
-petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
+petal_scatterplot = sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="muted")
 plt.savefig("petal_scatterplot.png", bbox_inches='tight')
 plt.show()
 
-sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="colorblind")
+sns.scatterplot(data=df, x="petal_length", y="petal_width", hue="species", palette="muted")
 x = df['petal_length']
 y = df['petal_width']
 slope, intercept = np.polyfit(x, y, 1)
@@ -69,7 +69,7 @@ plt.legend()
 plt.savefig("petal_scatterplot_trend_line.png", bbox_inches='tight')
 plt.show()
 
-sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="colorblind")
+sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species", palette="muted")
 x = df['sepal_length']
 y = df['sepal_width']
 slope, intercept = np.polyfit(x, y, 1)
@@ -81,11 +81,11 @@ plt.legend()
 plt.savefig("sepal_scatterplot_trend_line.png", bbox_inches='tight')
 plt.show()
 
-sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', palette="colorblind", height=5, aspect=1.3)
+sns.lmplot(x='sepal_length', y='sepal_width', data=df, hue='species', palette="muted", height=5, aspect=1.3)
 plt.title("Sepal Length vs Sepal Width with Individual Regression Line")
 plt.savefig("sepal_scatterplot_individual_line.png", bbox_inches='tight')
 plt.show()
 
-pair_plot = sns.pairplot(df, hue="species")
+pair_plot = sns.pairplot(df, hue="species", palette="muted")
 pair_plot.savefig("pairplot.png", bbox_inches='tight')
 plt.show()
